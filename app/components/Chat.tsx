@@ -45,8 +45,8 @@ const Chat = () => {
   };
 
   const userColors = {
-    user: "#4e663c",
-    assistant: "#a04d31",
+    user: "#89a574",
+    assistant: "#c97458",
     function: "#fff",
     system: "#fff",
     tool: "#fff",
