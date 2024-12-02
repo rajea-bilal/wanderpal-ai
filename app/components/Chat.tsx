@@ -152,7 +152,7 @@ const Chat = () => {
       <form onSubmit={onSubmit} className="mainForm">
         <input
           name="input-field"
-          placeholder="Share your travel dreams..."
+          placeholder="Share your plans..."
           onChange={handleInputChange}
           value={input}
           className="formInput"
