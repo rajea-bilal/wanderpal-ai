@@ -41,7 +41,6 @@ pre {
 }
 .logoBox {
   margin-top: 1.2rem;
-  /* border: 1px solid green; */
 }
 
 .logo-text {
@@ -52,7 +51,7 @@ pre {
 }
 
 .logo-caption {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   letter-spacing: 0.5px;
   font-weight: bold;
   color: rgb(230, 226, 213);
@@ -87,8 +86,9 @@ h1 {
   line-height: 1.5;
   margin-bottom: 1rem;
   font-family: "Roboto", serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
+  padding: 0rem 0.2rem;
 }
 .primaryColor {
   color: #e02aff;
@@ -137,14 +137,17 @@ h1 {
   color: #a49d90;
 }
 .initial-screen p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #60584a;
+  text-align: center;
 }
 .mainForm {
   margin-bottom: 2rem;
   margin-top: 1.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 1rem;
 }
 
 .formInput {
@@ -160,16 +163,22 @@ h1 {
 .formInput:focus {
   outline: 3px solid #b2a99c;
 }
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .mainButton {
-  padding: 10px 25px;
+  padding: 15px 25px;
   border-radius: 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: none;
   outline: none;
   background-color: #b35839;
   color: #e6e2d5;
   font-weight: 900;
-  margin-left: 10px;
+
   cursor: pointer;
 }
 
@@ -178,15 +187,15 @@ h1 {
 }
 
 .secondaryButton {
-  padding: 10px 20px;
+  padding: 15px 25px;
   border-radius: 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: 2px solid #b35839;
   outline: none;
   background-color: transparent;
   color: #e6e2d5;
   font-weight: 900;
-  margin-left: 10px;
+
   cursor: pointer;
 }
 
@@ -245,6 +254,8 @@ button:disabled:hover {
   padding: 20px;
 
   color: #1d2526;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
 }
 
 .image-box {
@@ -267,6 +278,24 @@ button:disabled:hover {
   font-weight: 800;
 }
 
+@media screen and (min-width: 600px) {
+  .logo-caption {
+    font-size: 3.5rem;
+  }
+  .header-text {
+    font-size: 1.2rem;
+  }
+  .mainForm {
+    flex-direction: row;
+  }
+  .btn-container {
+    flex-direction: row;
+  }
+
+  .initial-screen p {
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-width: 600px) {
   .mainForm input {
     width: auto;

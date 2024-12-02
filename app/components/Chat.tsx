@@ -157,23 +157,24 @@ const Chat = () => {
           value={input}
           className="formInput"
         />
-
-        <button
-          type="submit"
-          className="mainButton"
-          disabled={loading}
-          onClick={() => setSubmitType("text")}
-        >
-          Chat
-        </button>
-        <button
-          type="submit"
-          className="secondaryButton"
-          disabled={loading}
-          onClick={() => setSubmitType("image")}
-        >
-          Generate Image
-        </button>
+        <div className="btn-container">
+          <button
+            type="submit"
+            className="mainButton"
+            disabled={loading}
+            onClick={() => setSubmitType("text")}
+          >
+            Chat
+          </button>
+          <button
+            type="submit"
+            className="secondaryButton"
+            disabled={loading}
+            onClick={() => setSubmitType("image")}
+          >
+            Generate Image
+          </button>
+        </div>
       </form>
     </>
   );
