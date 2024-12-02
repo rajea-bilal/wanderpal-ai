@@ -94,7 +94,7 @@ const Chat = () => {
             <div className="initial-screen-container">
               <section className="initial-screen">
                 <Luggage className="luggage-icon" />
-                <p>Lets make you a dream travel plan...</p>
+                <p>Lets chat to make you a dream travel plan...</p>
               </section>
             </div>
           )}
