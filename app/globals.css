@@ -252,7 +252,7 @@ button:disabled:hover {
 
   /* background: rgba(238, 230, 213, 0); */
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
