@@ -1,16 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Crimson Pro", serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+code,
+pre {
+  font-family: "Geist Mono", monospace;
+}
+
 .App {
   text-align: center;
-  background-color: #000e1e;
-  height: 100vh;
+  position: relative;
+  width: 100%;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("/tajMahal.jpg") center/cover no-repeat;
+  min-height: 100vh;
   color: white;
   display: flex;
   margin: 0;
@@ -18,21 +28,45 @@ body {
 
 .container {
   width: 100%;
-  max-width: 920px;
+  max-width: 740px;
   margin: auto;
 }
 
+.logoImage {
+  /* border: 1px solid yellow; */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
 .logoBox {
-  padding-top: 10px;
+  margin-top: 1.2rem;
+  /* border: 1px solid green; */
 }
 
-.logo {
-  margin: 10px;
+.logo-text {
+  /* border: 1px solid orange; */
+  display: flex;
+  flex-direction: column;
+  gap: 1;
 }
 
+.logo-caption {
+  font-size: 3.5rem;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  color: rgb(230, 226, 213);
+  font-family: "Crimson Pro", serif;
+}
+.logo-small-text {
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  color: rgb(183, 176, 156);
+}
 .small-asset {
   width: 200px;
   height: 50px;
+  border: 1px solid red;
 }
 
 .red-text {
@@ -44,6 +78,18 @@ h1 {
   font-size: 50px;
 }
 
+.header-text {
+  color: rgb(230, 226, 213);
+  max-width: 36rem;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-family: "Roboto", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
 .primaryColor {
   color: #e02aff;
 }
@@ -52,53 +98,100 @@ h1 {
   color: rgb(184, 65, 184);
 }
 
-.mainForm {
-  margin: 20px auto;
+.download-button {
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background: #b35839;
+  color: #e6e2d5;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+}
+.download-button:hover {
+  background: #bb694d;
 }
 
-.mainForm input {
+.initial-screen-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #a49d90;
+  border-style: dashed;
+  border-radius: 15px;
+}
+.initial-screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.luggage-icon {
+  width: 10rem;
+  height: 10rem;
+  color: #a49d90;
+}
+.initial-screen p {
+  font-size: 1.5rem;
+  color: #60584a;
+}
+.mainForm {
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.formInput {
+  background: #e6e2d5;
+  border: none;
+  outline: none;
   width: 100%;
   max-width: 400px;
-  padding: 10px 20px;
+  padding: 13px 20px;
   border-radius: 100px;
-  border: 1px solid white;
-  outline: none;
 }
 
+.formInput:focus {
+  outline: 3px solid #b2a99c;
+}
 .mainButton {
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 20px;
-  font-size: 1rem;
-  border: 1px solid #e02aff;
+  font-size: 1.1rem;
+  border: none;
   outline: none;
-  background-color: #e02aff;
-  color: white;
+  background-color: #b35839;
+  color: #e6e2d5;
   font-weight: 900;
   margin-left: 10px;
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 .mainButton:hover {
-  background-color: #8f14d2;
+  background-color: #bb694d;
 }
 
 .secondaryButton {
   padding: 10px 20px;
   border-radius: 20px;
-  font-size: 1rem;
-  border: 1px solid #e02aff;
+  font-size: 1.1rem;
+  border: 2px solid #b35839;
   outline: none;
   background-color: transparent;
-  color: white;
+  color: #e6e2d5;
   font-weight: 900;
   margin-left: 10px;
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 .secondaryButton:hover {
-  background-color: rgba(184, 65, 184, 0.339);
+  background-color: hsla(15, 52%, 46%, 50%);
 }
 
 button:disabled,
@@ -113,11 +206,11 @@ button:disabled:hover {
 .loading-spinner {
   display: inline-block;
   margin: auto;
-  width: 50px;
-  height: 50px;
-  border: 5px solid #fff;
+  width: 70px;
+  height: 70px;
+  border: 10px solid #e6e2d5;
   border-radius: 50%;
-  border-top-color: #e02aff;
+  border-top-color: #b15939;
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 }
@@ -141,10 +234,17 @@ button:disabled:hover {
   max-width: 700px;
   margin: auto;
   text-align: left;
-  padding: 10px;
-  border: 1px solid white;
   border-radius: 20px;
   overflow: auto;
+  background: rgba(236, 235, 230, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+
+  color: #1d2526;
 }
 
 .image-box {
@@ -152,10 +252,17 @@ button:disabled:hover {
 }
 
 .chat-line {
-  margin: 10px 0;
+  margin-bottom: 0.75rem;
   white-space: pre-wrap;
 }
 
+.chat-author {
+  font-weight: bold;
+}
+.chat-content {
+  font-weight: 400;
+  line-height: 1.4;
+}
 .bold {
   font-weight: 800;
 }
